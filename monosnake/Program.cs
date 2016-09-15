@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace monosnake
 {
@@ -25,6 +26,17 @@ namespace monosnake
 			Snake snake = new Snake(p, 4, Directions.RIGHT);
 
 			snake.Draw();
+			Thread.Sleep(300);
+			snake.Move();
+			Thread.Sleep(300);
+			snake.Move();
+			Thread.Sleep(300);
+			snake.Move();
+			Thread.Sleep(300);
+			snake.Move();
+			Thread.Sleep(300);
+			snake.Move();
+
 
 			Console.ReadLine();
 		}
