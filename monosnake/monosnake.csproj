@@ -38,6 +38,8 @@
     <Compile Include="HorizontalLine.cs" />
     <Compile Include="Figure.cs" />
     <Compile Include="VerticalLine.cs" />
+    <Compile Include="Snake.cs" />
+    <Compile Include="Directions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
