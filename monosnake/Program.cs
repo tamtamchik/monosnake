@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace monosnake
 {
@@ -6,11 +7,19 @@ namespace monosnake
 	{
 		public static void Main(string[] args)
 		{
-			Point p1 = new Point(1, 3, '*');
-			p1.Draw();
+			int width = Console.BufferWidth - 1;
+			int height = Console.BufferHeight - 1;
 
-			Point p2 = new Point(4, 5, '#');
-			p2.Draw();
+			HorizontalLine upLine = new HorizontalLine(0, width, 0, '+');
+			HorizontalLine downLine = new HorizontalLine(0, width, height, '+');
+
+			VerticalLine leftLine = new VerticalLine(0, height, 0, '+');
+			VerticalLine rightLine = new VerticalLine(0, height, width, '+');
+
+			upLine.Draw();
+			downLine.Draw();
+			leftLine.Draw();
+			rightLine.Draw();
 
 			Console.ReadLine();
 		}

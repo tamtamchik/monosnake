@@ -1,8 +1,11 @@
 ﻿<Properties StartupConfiguration="{0D48ECDE-C7E9-4054-8862-B7D34937187B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="monosnake/Point.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="monosnake/VerticalLine.cs">
     <Files>
-      <File FileName="monosnake/Program.cs" Line="22" Column="4" />
-      <File FileName="monosnake/Point.cs" Line="3" Column="1" />
+      <File FileName="monosnake/Program.cs" Line="23" Column="1" />
+      <File FileName="monosnake/Point.cs" Line="18" Column="12" />
+      <File FileName="monosnake/HorizontalLine.cs" Line="8" Column="18" />
+      <File FileName="monosnake/Figure.cs" Line="9" Column="3" />
+      <File FileName="monosnake/VerticalLine.cs" Line="6" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />

@@ -15,7 +15,7 @@ namespace monosnake
 		public Point(int _x, int _y, char _sym)
 		{
 			x = _x;
-			y = _y;
+			y = _y;	
 			sym = _sym;
 		}
 
