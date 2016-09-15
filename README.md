@@ -1,1 +1,3 @@
-# mono-snake
+# MonoSnake
+
+Simple Mono console snake demo.
