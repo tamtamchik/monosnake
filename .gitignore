@@ -1,0 +1,5 @@
+
+*.userprefs
+monosnake/bin/
+monosnake/obj/
+
