@@ -7,6 +7,7 @@ namespace monosnake
 	public class Snake : Figure
 	{
 		Directions direction;
+
 		public Snake(Point tail, int length, Directions _direction)
 		{
 			direction = _direction;
@@ -38,6 +39,18 @@ namespace monosnake
 			nextPoint.Move(1, direction);
 
 			return nextPoint;
+		}
+
+		public void HandleKey(ConsoleKey key)
+		{
+			if (key == ConsoleKey.LeftArrow)
+				direction = Directions.LEFT;
+			else if (key == ConsoleKey.RightArrow)
+				direction = Directions.RIGHT;
+			else if (key == ConsoleKey.UpArrow)
+				direction = Directions.UP;
+			else if (key == ConsoleKey.DownArrow)
+				direction = Directions.DOWN;
 		}
 	}
 }

@@ -25,17 +25,19 @@ namespace monosnake
 			Point p = new Point(4, 5, '*');
 			Snake snake = new Snake(p, 4, Directions.RIGHT);
 
-			snake.Draw();
-			Thread.Sleep(300);
-			snake.Move();
-			Thread.Sleep(300);
-			snake.Move();
-			Thread.Sleep(300);
-			snake.Move();
-			Thread.Sleep(300);
-			snake.Move();
-			Thread.Sleep(300);
-			snake.Move();
+			while (true)
+			{
+				if (Console.KeyAvailable)
+				{
+					ConsoleKeyInfo key = Console.ReadKey();
+					snake.HandleKey(key.Key);
+
+					if (key.Key == ConsoleKey.Escape) break;
+				}
+
+				Thread.Sleep(100);
+				snake.Move();
+			}
 
 
 			Console.ReadLine();

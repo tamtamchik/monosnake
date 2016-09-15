@@ -1,9 +1,7 @@
 ﻿<Properties StartupConfiguration="{0D48ECDE-C7E9-4054-8862-B7D34937187B}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="monosnake/Program.cs">
     <Files>
-      <File FileName="monosnake/Program.cs" Line="28" Column="11" />
-      <File FileName="monosnake/HorizontalLine.cs" Line="13" Column="23" />
-      <File FileName="monosnake/VerticalLine.cs" Line="10" Column="30" />
+      <File FileName="monosnake/Program.cs" Line="35" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
