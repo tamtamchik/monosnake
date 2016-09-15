@@ -52,5 +52,21 @@ namespace monosnake
 			else if (key == ConsoleKey.DownArrow)
 				direction = Directions.DOWN;
 		}
+
+		internal bool Eat(Point food)
+		{
+			Point head = GetNextPoint();
+
+			if (head.IsHit(food))
+			{
+				food.sym = head.sym;
+				food.Draw();
+				pList.Add(food);
+
+				return true;
+			}
+
+			return false;
+		}
 	}
 }

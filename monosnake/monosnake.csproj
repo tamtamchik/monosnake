@@ -40,6 +40,7 @@
     <Compile Include="VerticalLine.cs" />
     <Compile Include="Snake.cs" />
     <Compile Include="Directions.cs" />
+    <Compile Include="FoodCreator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
