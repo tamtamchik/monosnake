@@ -41,6 +41,7 @@
     <Compile Include="Snake.cs" />
     <Compile Include="Directions.cs" />
     <Compile Include="FoodCreator.cs" />
+    <Compile Include="Walls.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -3,25 +3,27 @@ namespace monosnake
 {
 	public class FoodCreator
 	{
-		int width;
-		int height;
+		int mapWidth;
+		int mapHeight;
 		char sym;
+
+		private ConsoleColor color = ConsoleColor.Red;
 
 		Random random = new Random();
 
-		public FoodCreator(int width, int height, char sym)
+		public FoodCreator(int mapWidth, int mapHeight, char sym)
 		{
-			this.width = width;
-			this.height = height;
+			this.mapWidth = mapWidth;
+			this.mapHeight = mapHeight;
 			this.sym = sym;
 		}
 
 		internal Point CreateFood()
 		{
-			int x = random.Next(2, width - 2);
-			int y = random.Next(2, height - 2);
+			int x = random.Next(2, mapWidth - 2);
+			int y = random.Next(2, mapHeight - 2);
 
-			return new Point(x, y, sym);
+			return new Point(x, y, sym, color);
 		}
 	}
 }

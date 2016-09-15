@@ -18,5 +18,31 @@ namespace monosnake
 				p.Draw();
 			}
 		}
+
+		internal bool IsHit(Figure figure)
+		{
+			foreach (Point p in pList)
+			{
+				if (figure.IsHit(p))
+				{
+					return true;
+				}
+			}
+
+			return false;
+		}
+
+		private bool IsHit(Point point)
+		{
+			foreach (Point p in pList)
+			{
+				if (point.IsHit(p))
+				{
+					return true;
+				}
+			}
+
+			return false;
+		}
 	}
 }

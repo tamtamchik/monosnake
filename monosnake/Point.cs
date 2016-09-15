@@ -7,23 +7,26 @@ namespace monosnake
 		public int x;
 		public int y;
 		public char sym;
+		public ConsoleColor color;
 
 		public Point()
 		{
 		}
 
-		public Point(int _x, int _y, char _sym)
+		public Point(int x, int y, char sym, ConsoleColor color = ConsoleColor.Blue)
 		{
-			x = _x;
-			y = _y;	
-			sym = _sym;
+			this.x = x;
+			this.y = y;	
+			this.sym = sym;
+			this.color = color;
 		}
 
 		public Point(Point p)
 		{
-			x = p.x;
-			y = p.y;
-			sym = p.sym;
+			this.x = p.x;
+			this.y = p.y;
+			this.sym = p.sym;
+			this.color = p.color;
 		}
 
 		public void Move(int offset, Directions direction)
@@ -48,6 +51,7 @@ namespace monosnake
 
 		public void Draw()
 		{
+			Console.ForegroundColor = this.color;
 			Console.SetCursorPosition(x, y);
 			Console.Write(sym);
 		}
@@ -60,7 +64,7 @@ namespace monosnake
 
 		public bool IsHit(Point p)
 		{
-			return p.x == this.x && p.y == this.y;
+			return p.x == x && p.y == y;
 		}
 
 		public override string ToString()

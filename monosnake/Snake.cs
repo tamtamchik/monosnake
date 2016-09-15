@@ -8,10 +8,13 @@ namespace monosnake
 	{
 		Directions direction;
 
+		private ConsoleColor color = ConsoleColor.Green;
+
 		public Snake(Point tail, int length, Directions _direction)
 		{
 			direction = _direction;
 			pList = new List<Point>();
+			tail.color = this.color;
 
 			for (int i = 0; i < length; i++)
 			{
@@ -29,7 +32,7 @@ namespace monosnake
 			pList.Add(head);
 
 			tail.Clear();
-			head.Draw();
+			Draw();
 		}
 
 		public Point GetNextPoint()
@@ -39,6 +42,20 @@ namespace monosnake
 			nextPoint.Move(1, direction);
 
 			return nextPoint;
+		}
+
+		internal bool IsHitTail()
+		{
+			Point head = pList.Last();
+
+			for (int i = 0; i < pList.Count - 2; i++) {
+				
+				if (head.IsHit(pList[i])) {
+					return true;	
+				}
+			}
+
+			return false;
 		}
 
 		public void HandleKey(ConsoleKey key)
@@ -60,6 +77,7 @@ namespace monosnake
 			if (head.IsHit(food))
 			{
 				food.sym = head.sym;
+				food.color = color;
 				food.Draw();
 				pList.Add(food);
 
